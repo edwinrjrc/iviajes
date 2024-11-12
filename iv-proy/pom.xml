@@ -1,0 +1,16 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>pe.com.innovaviajes</groupId>
+  <artifactId>iv-proy</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>iv-proy</name>
+  <description>Proyecto padre de Innova Viajes que contiene los otros modulos</description>
+  <modules>
+  	<module>iv-dto</module>
+  	<module>iv-jpa-destinos</module>
+  	<module>iv-service-viajes</module>
+  	<module>iv-gateway</module>
+  	<module>iv-eureka-server</module>
+  </modules>
+</project>
