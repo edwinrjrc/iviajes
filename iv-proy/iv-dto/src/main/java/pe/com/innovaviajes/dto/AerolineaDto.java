@@ -16,6 +16,8 @@ public class AerolineaDto extends BaseDto {
 	private String codigoIata;
 	
 	private String nombre;
+	
+	private String nombreCorto;
 
 	/**
 	 * @return the id
@@ -57,6 +59,20 @@ public class AerolineaDto extends BaseDto {
 	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+
+	/**
+	 * @return the nombreCorto
+	 */
+	public String getNombreCorto() {
+		return nombreCorto;
+	}
+
+	/**
+	 * @param nombreCorto the nombreCorto to set
+	 */
+	public void setNombreCorto(String nombreCorto) {
+		this.nombreCorto = nombreCorto;
 	}
 	
 	

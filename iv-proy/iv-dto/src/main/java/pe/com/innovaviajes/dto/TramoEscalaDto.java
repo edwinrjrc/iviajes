@@ -23,6 +23,8 @@ public class TramoEscalaDto extends BaseDto {
 	private AvionDto avionTramo;
 	
 	private String numeroVuelo;
+	
+	private Integer numeroEscala;
 
 	/**
 	 * @return the origen
@@ -92,6 +94,20 @@ public class TramoEscalaDto extends BaseDto {
 	 */
 	public void setNumeroVuelo(String numeroVuelo) {
 		this.numeroVuelo = numeroVuelo;
+	}
+
+	/**
+	 * @return the numeroEscala
+	 */
+	public Integer getNumeroEscala() {
+		return numeroEscala;
+	}
+
+	/**
+	 * @param numeroEscala the numeroEscala to set
+	 */
+	public void setNumeroEscala(Integer numeroEscala) {
+		this.numeroEscala = numeroEscala;
 	}
 
 }

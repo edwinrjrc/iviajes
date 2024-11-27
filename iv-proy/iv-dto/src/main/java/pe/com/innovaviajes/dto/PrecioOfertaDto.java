@@ -35,6 +35,8 @@ public class PrecioOfertaDto extends BaseDto {
 	
 	private BigDecimal totalFee;
 	
+	private BigDecimal totalImptosCargos;
+	
 	private BigDecimal totalRuta;
 
 	/**
@@ -203,6 +205,20 @@ public class PrecioOfertaDto extends BaseDto {
 	 */
 	public void setTotalRuta(BigDecimal totalRuta) {
 		this.totalRuta = totalRuta;
+	}
+
+	/**
+	 * @return the totalImptosCargos
+	 */
+	public BigDecimal getTotalImptosCargos() {
+		return totalImptosCargos;
+	}
+
+	/**
+	 * @param totalImptosCargos the totalImptosCargos to set
+	 */
+	public void setTotalImptosCargos(BigDecimal totalImptosCargos) {
+		this.totalImptosCargos = totalImptosCargos;
 	}
 	
 	

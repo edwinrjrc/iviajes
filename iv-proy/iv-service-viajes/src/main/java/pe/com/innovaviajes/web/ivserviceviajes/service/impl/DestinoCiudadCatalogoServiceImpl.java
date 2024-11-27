@@ -23,12 +23,15 @@ import pe.com.innovaviajes.cross.util.UtilIvDto;
 import pe.com.innovaviajes.dto.AerolineaDto;
 import pe.com.innovaviajes.dto.AeropuertoWebDto;
 import pe.com.innovaviajes.dto.AeropuertoWebMostrarDto;
+import pe.com.innovaviajes.dto.AvionDto;
 import pe.com.innovaviajes.dto.ConsultaViajeDto;
 import pe.com.innovaviajes.dto.DestinoCiudadDto;
 import pe.com.innovaviajes.dto.HorarioRutaDto;
+import pe.com.innovaviajes.dto.HorarioVueloDto;
 import pe.com.innovaviajes.dto.OfertaEncontrada;
 import pe.com.innovaviajes.dto.PrecioOfertaDto;
 import pe.com.innovaviajes.dto.RutaTramoDto;
+import pe.com.innovaviajes.dto.TramoEscalaDto;
 import pe.com.innovaviajes.dto.VuelosEncontrados;
 import pe.com.innovaviajes.exception.UtilIvDtoException;
 import pe.com.innovaviajes.web.ivserviceviajes.exception.IvServiceDestinoCiudadException;
@@ -113,10 +116,24 @@ public class DestinoCiudadCatalogoServiceImpl implements DestinoCiudadCatalogoSe
 			AerolineaDto aerolineaDto = new AerolineaDto();
 			aerolineaDto.setCodigoIata("LIM");
 			aerolineaDto.setId(1);
-			aerolineaDto.setNombre("LATAM Airlines");
+			aerolineaDto.setNombre("Azerbaijan Airlines");
+			aerolineaDto.setNombreCorto("Azerbaijan A.");
+			
+			AvionDto avionTramo = new AvionDto();
+			avionTramo.setId(1);
+			avionTramo.setMarcaAvion("AirBus");
+			avionTramo.setModeloAvion("A320 NEO");
+			
+			AeropuertoWebMostrarDto aeropuertoDestinoEscala = new AeropuertoWebMostrarDto();
+			aeropuertoDestinoEscala.setCodigoIata("YOW");
+			aeropuertoDestinoEscala.setDescripcion("Aeropuerto Internacional de Ottawa");
+			aeropuertoDestinoEscala.setId(251);
+			aeropuertoDestinoEscala.setNombreAeropuertoMostrar("Aeropuerto Internacional de Ottawa");
+			aeropuertoDestinoEscala.setNombreCiudad("Otawa");
+			aeropuertoDestinoEscala.setNombrePais("Canada");
 			
 			AeropuertoWebMostrarDto aeropuertoDestino = new AeropuertoWebMostrarDto();
-			aeropuertoDestino.setCodigoIata("LIM");
+			aeropuertoDestino.setCodigoIata(consultaViajeDto.getCodigoIataDestino());
 			aeropuertoDestino.setDescripcion("Aeropuerto Internacional Jorge Chavez");
 			aeropuertoDestino.setId(1);
 			aeropuertoDestino.setIdEstadoRegistro(1);
@@ -125,7 +142,7 @@ public class DestinoCiudadCatalogoServiceImpl implements DestinoCiudadCatalogoSe
 			aeropuertoDestino.setNombrePais("Peru");
 			
 			AeropuertoWebMostrarDto aeropuertoOrigen = new AeropuertoWebMostrarDto();
-			aeropuertoOrigen.setCodigoIata("TYL");
+			aeropuertoOrigen.setCodigoIata(consultaViajeDto.getCodigoIataOrigen());
 			aeropuertoOrigen.setDescripcion("Aeropuerto Internacional Capitán FAP Víctor Montes Arias");
 			aeropuertoOrigen.setId(1);
 			aeropuertoOrigen.setNombreAeropuertoMostrar("Aeropuerto Internacional Capitán FAP Víctor Montes Arias");
@@ -138,17 +155,41 @@ public class DestinoCiudadCatalogoServiceImpl implements DestinoCiudadCatalogoSe
 			horarioRuta.setEquipaBodegaEjecutivo(true);
 			horarioRuta.setEquipaCarrion(true);
 			horarioRuta.setEquipaMochila(true);
-			horarioRuta.setFechaLlegadaVuelo(UtilIvDto.parseStringADate("05/10/2022 14:11:52", Constantes.FORMAT_DATE_1, null));
+			horarioRuta.setFechaLlegadaVuelo(UtilIvDto.parseStringADate("05/10/2022 14:11:00", Constantes.FORMAT_DATE_1, null));
 			horarioRuta.setFechaModificacion(UtilIvDto.hoy());
 			horarioRuta.setFechaRegistro(UtilIvDto.hoy());
-			horarioRuta.setFechaSalidaVuelo(UtilIvDto.parseStringADate("05/10/2022 04:05:11", Constantes.FORMAT_DATE_1, null));
+			horarioRuta.setFechaSalidaVuelo(UtilIvDto.parseStringADate("05/10/2022 04:05:00", Constantes.FORMAT_DATE_1, null));
 			horarioRuta.setIdEstadoRegistro(1);
 			horarioRuta.setTimeZoneLlegada(UtilIvDto.obtenerTimeZoneLocal());
 			horarioRuta.setTimeZoneOrigen(UtilIvDto.obtenerTimeZoneLocal());
 			horarioRuta.setIdUsuarioModificacion(1);
 			horarioRuta.setIdUsuarioRegistro(1);
 			
+			List<TramoEscalaDto> listaEscalas = new ArrayList<TramoEscalaDto>();
+			
+			HorarioVueloDto horarioVueloEscala = new HorarioVueloDto();
+			horarioVueloEscala.setAerolineaDto(aerolineaDto);
+			horarioVueloEscala.setFechaLlegadaVuelo(UtilIvDto.parseStringADate("05/10/2022 04:05:00", Constantes.FORMAT_DATE_1, null));
+			horarioVueloEscala.setFechaSalidaVuelo(UtilIvDto.parseStringADate("05/10/2022 04:05:00", Constantes.FORMAT_DATE_1, null));
+			horarioVueloEscala.setIdEstadoRegistro(1);
+			
+			TramoEscalaDto tramoEscala = new TramoEscalaDto();
+			tramoEscala.setOrigen(aeropuertoOrigen);
+			tramoEscala.setAvionTramo(avionTramo);
+			tramoEscala.setDestino(aeropuertoDestinoEscala);
+			tramoEscala.setHorarioVuelo(horarioVueloEscala);
+			tramoEscala.setIdEstadoRegistro(1);
+			tramoEscala.setNumeroEscala(1);
+			tramoEscala.setNumeroVuelo("123");
+			
+			listaEscalas.add(tramoEscala);
+			horarioRuta.setEscalas(listaEscalas);
+			horarioRuta.setInEscalas(horarioRuta.getEscalas().isEmpty()?0:1);
+			horarioRuta.setNumeroEscalas(horarioRuta.getInEscalas()==1?listaEscalas.size():0);
+			
 			List<HorarioRutaDto> horariosRuta = new ArrayList<HorarioRutaDto>();
+			horariosRuta.add(horarioRuta);
+			horariosRuta.add(horarioRuta);
 			horariosRuta.add(horarioRuta);
 			
 			List<HorarioRutaDto> horariosRuta2 = new ArrayList<HorarioRutaDto>();
@@ -168,6 +209,7 @@ public class DestinoCiudadCatalogoServiceImpl implements DestinoCiudadCatalogoSe
 			horarioRuta.setIdUsuarioModificacion(1);
 			horarioRuta.setIdUsuarioRegistro(1);
 			horariosRuta2.add(horarioRuta);
+			horariosRuta2.add(horarioRuta);
 			
 			List<RutaTramoDto> listaRutaTramos = new ArrayList<RutaTramoDto>();
 			
@@ -176,7 +218,8 @@ public class DestinoCiudadCatalogoServiceImpl implements DestinoCiudadCatalogoSe
 			rutaTramo.setNumeroOrden(1);
 			rutaTramo.setOrigen(aeropuertoOrigen);
 			rutaTramo.setHorariosRuta(horariosRuta);
-			rutaTramo.setFechaViaje(UtilIvDto.parseStringADate("05/11/2022 04:05:11", Constantes.FORMAT_DATE_1, null));
+			//rutaTramo.setFechaViaje(UtilIvDto.parseStringADate("05/11/2022 04:05:11", Constantes.FORMAT_DATE_1, null));
+			rutaTramo.setFechaViaje(consultaViajeDto.getFechaIda());
 			rutaTramo.setTipoViaje(1);
 			listaRutaTramos.add(rutaTramo);
 			
@@ -185,14 +228,25 @@ public class DestinoCiudadCatalogoServiceImpl implements DestinoCiudadCatalogoSe
 			rutaTramo.setNumeroOrden(2);
 			rutaTramo.setOrigen(aeropuertoDestino);
 			rutaTramo.setHorariosRuta(horariosRuta2);
-			rutaTramo.setFechaViaje(UtilIvDto.parseStringADate("05/11/2022 19:08:52", Constantes.FORMAT_DATE_1, null));
+			//rutaTramo.setFechaViaje(UtilIvDto.parseStringADate("05/11/2022 19:08:52", Constantes.FORMAT_DATE_1, null));
+			rutaTramo.setFechaViaje(consultaViajeDto.getFechaVuelta());
 			rutaTramo.setTipoViaje(2);
 			listaRutaTramos.add(rutaTramo);
 			
+			BigDecimal porcentajeFee = BigDecimal.valueOf(0.05);
+			
+			BigDecimal totalBoletos = BigDecimal.ZERO;
+			
+			BigDecimal totalFee = BigDecimal.ZERO;//BigDecimal.valueOf(89.15);
+			
+			BigDecimal totalImptos = BigDecimal.valueOf(489.15);
+			
+			BigDecimal totalImptosCargos = BigDecimal.ZERO;
+			
 			PrecioOfertaDto precioOferta = new PrecioOfertaDto();
-			precioOferta.setCantidadAdultos((short) 1);
-			precioOferta.setCantidadInfantes((short) 0);
-			precioOferta.setCantidadNinos((short) 0);
+			precioOferta.setCantidadAdultos(consultaViajeDto.getAdultos().shortValue());
+			precioOferta.setCantidadInfantes(consultaViajeDto.getInfantes().shortValue());
+			precioOferta.setCantidadNinos(consultaViajeDto.getNinos().shortValue());
 			precioOferta.setFechaModificacion(UtilIvDto.hoy());
 			precioOferta.setFechaRegistro(UtilIvDto.hoy());
 			precioOferta.setIdEstadoRegistro(1);
@@ -201,8 +255,32 @@ public class DestinoCiudadCatalogoServiceImpl implements DestinoCiudadCatalogoSe
 			precioOferta.setPorcentajePrecioInfantes(BigDecimal.TEN);
 			precioOferta.setPorcentajePrecioNinos(BigDecimal.TEN);
 			precioOferta.setPrecioUnitarioClase(BigDecimal.valueOf(998.15));
-			precioOferta.setTotalFee(BigDecimal.valueOf(89.15));
-			precioOferta.setTotalImpuestos(BigDecimal.valueOf(489.15));
+			precioOferta.setTotalFee(totalFee);
+			precioOferta.setTotalImpuestos(totalImptos);
+			
+			BigDecimal totalPrecioAdultos = precioOferta.getPrecioUnitarioClase().multiply(UtilIvDto.parseBigDecimal(precioOferta.getCantidadAdultos()));
+			precioOferta.setTotalPrecioAdultos(totalPrecioAdultos);
+			
+			BigDecimal totalPrecioInfantes = precioOferta.getPrecioUnitarioClase().multiply(UtilIvDto.parseBigDecimal(precioOferta.getCantidadInfantes()));
+			totalPrecioInfantes = totalPrecioInfantes.multiply(precioOferta.getPorcentajePrecioInfantes());
+			totalPrecioInfantes = totalPrecioInfantes.divide(BigDecimal.valueOf(100));
+			precioOferta.setTotalPrecioInfantes(totalPrecioInfantes);
+			
+			BigDecimal totalPrecioNinos = precioOferta.getPrecioUnitarioClase().multiply(UtilIvDto.parseBigDecimal(precioOferta.getCantidadNinos()));
+			totalPrecioNinos = totalPrecioNinos.multiply(precioOferta.getPorcentajePrecioNinos());
+			totalPrecioNinos = totalPrecioNinos.divide(BigDecimal.valueOf(100));
+			precioOferta.setTotalPrecioNinos(totalPrecioNinos);
+			
+			totalBoletos = totalBoletos.add(totalPrecioAdultos).add(totalPrecioNinos).add(totalPrecioInfantes);
+			
+			totalFee = totalBoletos.multiply(porcentajeFee);
+			
+			totalImptosCargos = totalImptosCargos.add(totalImptos).add(totalFee);
+			
+			precioOferta.setTotalImptosCargos(totalImptosCargos);
+			
+			BigDecimal totalRuta = UtilIvDto.redondeA2(totalBoletos.add(totalImptosCargos));
+			precioOferta.setTotalRuta(totalRuta);
 			
 			oferta1.setListaRutaTramos(listaRutaTramos);
 			oferta1.setPrecioOfertaDto(precioOferta);

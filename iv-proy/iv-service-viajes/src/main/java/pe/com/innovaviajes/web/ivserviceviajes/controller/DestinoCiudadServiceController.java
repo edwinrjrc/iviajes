@@ -38,7 +38,7 @@ public class DestinoCiudadServiceController {
 	@Autowired
 	private DestinoCiudadCatalogoService destinoCiudadCatalogoService;
 	
-	@CrossOrigin(origins = "http://localhost:4200")
+	@CrossOrigin(origins = "*")
 	@GetMapping(value = "/destinoCiudadService")
 	public ResponseEntity<Map<String, Object>> obtenerDestinos(@RequestParam(name = "nombreDestino", required = false) String nombreDestino) {
 		ResponseEntity<Map<String, Object>> salida = null;

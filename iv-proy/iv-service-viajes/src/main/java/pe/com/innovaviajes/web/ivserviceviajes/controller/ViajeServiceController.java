@@ -49,12 +49,12 @@ public class ViajeServiceController {
 	 * @param infantes
 	 * @return
 	 */
-	@CrossOrigin(origins = "http://localhost:4200")
+	@CrossOrigin(origins = "*")
 	@GetMapping(value = "/vuelosCotizacion")
 	public ResponseEntity<Map<String, Object>> consultarViaje(
 			@RequestParam(name = "tipoViaje", required = false) String tipoViaje,
-			@RequestParam(name = "codigoIataOrigen", required = true) String codigoIataOrigen,
-			@RequestParam(name = "codigoIataDestino", required = true) String codigoIataDestino,
+			@RequestParam(name = "codigoIataOrigen", required = false) String codigoIataOrigen,
+			@RequestParam(name = "codigoIataDestino", required = false) String codigoIataDestino,
 			@RequestParam(name = "claseVuelo", required = false) String claseVuelo,
 			@RequestParam(name = "fechaIda", required = false) String fechaIda,
 			@RequestParam(name = "fechaVuelta", required = false) String fechaVuelta,

@@ -3,6 +3,7 @@
  */
 package pe.com.innovaviajes.dto;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.TimeZone;
@@ -29,6 +30,10 @@ public class HorarioVueloDto extends BaseDto {
 	private AerolineaDto aerolineaDto;
 	
 	private List<TramoEscalaDto> escalas;
+	
+	private Integer inEscalas;
+	
+	private Integer numeroEscalas;
 
 	/**
 	 * @return the fechaSalidaVuelo
@@ -104,6 +109,9 @@ public class HorarioVueloDto extends BaseDto {
 	 * @return the escalas
 	 */
 	public List<TramoEscalaDto> getEscalas() {
+		if (escalas == null) {
+			escalas = new ArrayList<TramoEscalaDto>();
+		}
 		return escalas;
 	}
 
@@ -112,5 +120,43 @@ public class HorarioVueloDto extends BaseDto {
 	 */
 	public void setEscalas(List<TramoEscalaDto> escalas) {
 		this.escalas = escalas;
+	}
+
+	/**
+	 * @return the inEscalas
+	 */
+	public Integer getInEscalas() {
+		boolean vacio = getEscalas().isEmpty();
+		inEscalas = 0;
+		if (!vacio) {
+			inEscalas = 1;
+		}
+		return inEscalas;
+	}
+
+	/**
+	 * @param inEscalas the inEscalas to set
+	 */
+	public void setInEscalas(Integer inEscalas) {
+		this.inEscalas = inEscalas;
+	}
+
+	/**
+	 * @return the numeroEscalas
+	 */
+	public Integer getNumeroEscalas() {
+		numeroEscalas = 0;
+		if (getInEscalas().intValue() == 1) {
+			numeroEscalas = getEscalas().size();
+		}
+		
+		return numeroEscalas;
+	}
+
+	/**
+	 * @param numeroEscalas the numeroEscalas to set
+	 */
+	public void setNumeroEscalas(Integer numeroEscalas) {
+		this.numeroEscalas = numeroEscalas;
 	}
 }

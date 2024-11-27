@@ -3,6 +3,8 @@
  */
 package pe.com.innovaviajes.cross.util;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -98,4 +100,46 @@ public class UtilIvDto {
 		return timeZone;
 	}
 	
+	public static BigDecimal parseBigDecimal(short valor) {
+		BigDecimal resultado = BigDecimal.ZERO;
+		
+		resultado = BigDecimal.valueOf(valor);
+		
+		return resultado;
+	}
+	
+	public static BigDecimal redondea(BigDecimal valor, int numeroDecimales) throws UtilIvDtoException {
+		try {
+			if (valor != null) {
+				return valor.setScale(numeroDecimales, RoundingMode.HALF_UP);
+			}
+			else {
+				throw new UtilIvDtoException("Valor en nulo");
+			}
+		} catch (NullPointerException e) {
+			throw new UtilIvDtoException("Error: valor nulo",e);
+		} catch (Exception e) {
+			throw new UtilIvDtoException(e.getMessage(),e);
+		} 
+	}
+	
+	public static BigDecimal redondeA2(BigDecimal valor) throws UtilIvDtoException {
+		return redondea(valor,2);
+	}
+	
+	public static BigDecimal redondeA3(BigDecimal valor) throws UtilIvDtoException {
+		return redondea(valor,3);
+	}
+	
+	public static BigDecimal redondeA4(BigDecimal valor) throws UtilIvDtoException {
+		return redondea(valor,4);
+	}
+	
+	public static BigDecimal redondeA5(BigDecimal valor) throws UtilIvDtoException {
+		return redondea(valor,5);
+	}
+	
+	public static BigDecimal redondeA6(BigDecimal valor) throws UtilIvDtoException {
+		return redondea(valor,6);
+	}
 }
