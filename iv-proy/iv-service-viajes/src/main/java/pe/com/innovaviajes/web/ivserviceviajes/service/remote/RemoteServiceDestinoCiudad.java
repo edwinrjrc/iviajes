@@ -49,7 +49,6 @@ public class RemoteServiceDestinoCiudad {
 	@Autowired
 	private RestTemplate restTemplate;
 	
-	@SuppressWarnings("rawtypes")
 	public List<DestinoCiudadDto> consultarDestinos(String nombreDestino) throws IvServiceDestinoCiudadException {
 		List<DestinoCiudadDto> listaDestinos;
 		try {
@@ -72,7 +71,7 @@ public class RemoteServiceDestinoCiudad {
 			    List datosLista = (List) respuesta.getBody().get(Constantes.VALOR_DATA_MAP);
 			    listaDestinos = new ArrayList<>();
 			    for (Object objeto : datosLista) {
-			    	LinkedHashMap map = (LinkedHashMap) objeto;
+			    	LinkedHashMap<?, ?> map = (LinkedHashMap<?, ?>) objeto;
 			    	
 			    	listaDestinos.add(mapper.convertValue(map, DestinoCiudadDto.class));
 				}
