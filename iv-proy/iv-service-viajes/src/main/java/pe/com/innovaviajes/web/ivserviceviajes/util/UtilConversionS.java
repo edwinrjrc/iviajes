@@ -128,6 +128,7 @@ public class UtilConversionS {
 		}
 	}
 
+	@SuppressWarnings("unused")
 	private static IvParameterSpec generateIv() {
 		byte[] iv = new byte[16];
 		new SecureRandom().nextBytes(iv);

@@ -10,6 +10,8 @@ package pe.com.innovaviajes.dto;
 public class HorarioRutaDto extends HorarioVueloDto {
 
 	private static final long serialVersionUID = -204214283301368793L;
+	
+	private Integer id;
 
 	private boolean equipaMochila;
 
@@ -75,5 +77,20 @@ public class HorarioRutaDto extends HorarioVueloDto {
 	public void setEquipaBodegaEjecutivo(boolean equipaBodegaEjecutivo) {
 		this.equipaBodegaEjecutivo = equipaBodegaEjecutivo;
 	}
+
+	/**
+	 * @return the id
+	 */
+	public Integer getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 	
 }

@@ -13,6 +13,8 @@ import java.util.List;
 public class RutaTramoDto extends BaseDto {
 
 	private static final long serialVersionUID = -994908192316823446L;
+	
+	private Integer id;
 
 	private AeropuertoWebMostrarDto origen;
 
@@ -108,5 +110,19 @@ public class RutaTramoDto extends BaseDto {
 	 */
 	public void setTipoViaje(Integer tipoViaje) {
 		this.tipoViaje = tipoViaje;
+	}
+
+	/**
+	 * @return the id
+	 */
+	public Integer getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Integer id) {
+		this.id = id;
 	}
 }

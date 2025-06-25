@@ -49,6 +49,7 @@ public class RemoteServiceDestinoCiudad {
 	@Autowired
 	private RestTemplate restTemplate;
 	
+	@SuppressWarnings("rawtypes")
 	public List<DestinoCiudadDto> consultarDestinos(String nombreDestino) throws IvServiceDestinoCiudadException {
 		List<DestinoCiudadDto> listaDestinos;
 		try {

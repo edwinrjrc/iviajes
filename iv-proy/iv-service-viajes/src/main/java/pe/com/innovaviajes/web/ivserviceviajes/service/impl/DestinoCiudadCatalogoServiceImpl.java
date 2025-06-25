@@ -188,8 +188,45 @@ public class DestinoCiudadCatalogoServiceImpl implements DestinoCiudadCatalogoSe
 			horarioRuta.setNumeroEscalas(horarioRuta.getInEscalas()==1?listaEscalas.size():0);
 			
 			List<HorarioRutaDto> horariosRuta = new ArrayList<HorarioRutaDto>();
+			
+			horarioRuta.setId(1);
 			horariosRuta.add(horarioRuta);
+			
+			
+			horarioRuta = new HorarioRutaDto();
+			horarioRuta.setId(2);
+			horarioRuta.setAerolineaDto(aerolineaDto);
+			horarioRuta.setEquipaBodega(true);
+			horarioRuta.setEquipaBodegaEjecutivo(true);
+			horarioRuta.setEquipaCarrion(true);
+			horarioRuta.setEquipaMochila(true);
+			horarioRuta.setFechaLlegadaVuelo(UtilIvDto.parseStringADate("05/10/2022 14:11:00", Constantes.FORMAT_DATE_1, null));
+			horarioRuta.setFechaModificacion(UtilIvDto.hoy());
+			horarioRuta.setFechaRegistro(UtilIvDto.hoy());
+			horarioRuta.setFechaSalidaVuelo(UtilIvDto.parseStringADate("05/10/2022 04:05:00", Constantes.FORMAT_DATE_1, null));
+			horarioRuta.setIdEstadoRegistro(1);
+			horarioRuta.setTimeZoneLlegada(UtilIvDto.obtenerTimeZoneLocal());
+			horarioRuta.setTimeZoneOrigen(UtilIvDto.obtenerTimeZoneLocal());
+			horarioRuta.setIdUsuarioModificacion(1);
+			horarioRuta.setIdUsuarioRegistro(1);
 			horariosRuta.add(horarioRuta);
+			
+			horarioRuta = new HorarioRutaDto();
+			horarioRuta.setId(3);
+			horarioRuta.setAerolineaDto(aerolineaDto);
+			horarioRuta.setEquipaBodega(true);
+			horarioRuta.setEquipaBodegaEjecutivo(true);
+			horarioRuta.setEquipaCarrion(true);
+			horarioRuta.setEquipaMochila(true);
+			horarioRuta.setFechaLlegadaVuelo(UtilIvDto.parseStringADate("05/10/2022 14:11:00", Constantes.FORMAT_DATE_1, null));
+			horarioRuta.setFechaModificacion(UtilIvDto.hoy());
+			horarioRuta.setFechaRegistro(UtilIvDto.hoy());
+			horarioRuta.setFechaSalidaVuelo(UtilIvDto.parseStringADate("05/10/2022 04:05:00", Constantes.FORMAT_DATE_1, null));
+			horarioRuta.setIdEstadoRegistro(1);
+			horarioRuta.setTimeZoneLlegada(UtilIvDto.obtenerTimeZoneLocal());
+			horarioRuta.setTimeZoneOrigen(UtilIvDto.obtenerTimeZoneLocal());
+			horarioRuta.setIdUsuarioModificacion(1);
+			horarioRuta.setIdUsuarioRegistro(1);
 			horariosRuta.add(horarioRuta);
 			
 			List<HorarioRutaDto> horariosRuta2 = new ArrayList<HorarioRutaDto>();
@@ -208,7 +245,11 @@ public class DestinoCiudadCatalogoServiceImpl implements DestinoCiudadCatalogoSe
 			horarioRuta.setTimeZoneOrigen(UtilIvDto.obtenerTimeZoneLocal());
 			horarioRuta.setIdUsuarioModificacion(1);
 			horarioRuta.setIdUsuarioRegistro(1);
+			
+			horarioRuta.setId(1);
 			horariosRuta2.add(horarioRuta);
+			
+			horarioRuta.setId(2);
 			horariosRuta2.add(horarioRuta);
 			
 			List<RutaTramoDto> listaRutaTramos = new ArrayList<RutaTramoDto>();
@@ -218,9 +259,9 @@ public class DestinoCiudadCatalogoServiceImpl implements DestinoCiudadCatalogoSe
 			rutaTramo.setNumeroOrden(1);
 			rutaTramo.setOrigen(aeropuertoOrigen);
 			rutaTramo.setHorariosRuta(horariosRuta);
-			//rutaTramo.setFechaViaje(UtilIvDto.parseStringADate("05/11/2022 04:05:11", Constantes.FORMAT_DATE_1, null));
 			rutaTramo.setFechaViaje(consultaViajeDto.getFechaIda());
 			rutaTramo.setTipoViaje(1);
+			rutaTramo.setId(1);
 			listaRutaTramos.add(rutaTramo);
 			
 			rutaTramo = new RutaTramoDto();
@@ -228,9 +269,9 @@ public class DestinoCiudadCatalogoServiceImpl implements DestinoCiudadCatalogoSe
 			rutaTramo.setNumeroOrden(2);
 			rutaTramo.setOrigen(aeropuertoDestino);
 			rutaTramo.setHorariosRuta(horariosRuta2);
-			//rutaTramo.setFechaViaje(UtilIvDto.parseStringADate("05/11/2022 19:08:52", Constantes.FORMAT_DATE_1, null));
 			rutaTramo.setFechaViaje(consultaViajeDto.getFechaVuelta());
 			rutaTramo.setTipoViaje(2);
+			rutaTramo.setId(2);
 			listaRutaTramos.add(rutaTramo);
 			
 			BigDecimal porcentajeFee = BigDecimal.valueOf(0.05);
@@ -284,6 +325,7 @@ public class DestinoCiudadCatalogoServiceImpl implements DestinoCiudadCatalogoSe
 			
 			oferta1.setListaRutaTramos(listaRutaTramos);
 			oferta1.setPrecioOfertaDto(precioOferta);
+			oferta1.setId(1);
 			
 			listaOfertasEncontradas.add(oferta1);
 			

@@ -13,6 +13,8 @@ public class OfertaEncontrada extends BaseDto {
 
 	private static final long serialVersionUID = 3036440112108850020L;
 	
+	private Integer id;
+	
 	private List<RutaTramoDto> listaRutaTramos;
 	
 	private PrecioOfertaDto precioOfertaDto;
@@ -44,6 +46,20 @@ public class OfertaEncontrada extends BaseDto {
 	 */
 	public void setListaRutaTramos(List<RutaTramoDto> listaRutaTramos) {
 		this.listaRutaTramos = listaRutaTramos;
+	}
+
+	/**
+	 * @return the id
+	 */
+	public Integer getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Integer id) {
+		this.id = id;
 	}
 	
 }
