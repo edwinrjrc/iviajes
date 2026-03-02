@@ -12,5 +12,6 @@
   	<module>iv-service-viajes</module>
   	<module>iv-gateway</module>
   	<module>iv-eureka-server</module>
+  	<module>iv-service-token</module>
   </modules>
 </project>

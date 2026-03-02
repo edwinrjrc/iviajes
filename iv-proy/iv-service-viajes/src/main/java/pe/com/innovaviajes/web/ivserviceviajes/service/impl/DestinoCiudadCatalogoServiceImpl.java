@@ -164,6 +164,7 @@ public class DestinoCiudadCatalogoServiceImpl implements DestinoCiudadCatalogoSe
 			horarioRuta.setTimeZoneOrigen(UtilIvDto.obtenerTimeZoneLocal());
 			horarioRuta.setIdUsuarioModificacion(1);
 			horarioRuta.setIdUsuarioRegistro(1);
+			horarioRuta.setId(100);
 			
 			List<TramoEscalaDto> listaEscalas = new ArrayList<TramoEscalaDto>();
 			
@@ -189,12 +190,11 @@ public class DestinoCiudadCatalogoServiceImpl implements DestinoCiudadCatalogoSe
 			
 			List<HorarioRutaDto> horariosRuta = new ArrayList<HorarioRutaDto>();
 			
-			horarioRuta.setId(1);
+			horarioRuta.setId(100);
 			horariosRuta.add(horarioRuta);
 			
-			
 			horarioRuta = new HorarioRutaDto();
-			horarioRuta.setId(2);
+			horarioRuta.setId(102);
 			horarioRuta.setAerolineaDto(aerolineaDto);
 			horarioRuta.setEquipaBodega(true);
 			horarioRuta.setEquipaBodegaEjecutivo(true);
@@ -212,7 +212,7 @@ public class DestinoCiudadCatalogoServiceImpl implements DestinoCiudadCatalogoSe
 			horariosRuta.add(horarioRuta);
 			
 			horarioRuta = new HorarioRutaDto();
-			horarioRuta.setId(3);
+			horarioRuta.setId(103);
 			horarioRuta.setAerolineaDto(aerolineaDto);
 			horarioRuta.setEquipaBodega(true);
 			horarioRuta.setEquipaBodegaEjecutivo(true);
@@ -245,11 +245,25 @@ public class DestinoCiudadCatalogoServiceImpl implements DestinoCiudadCatalogoSe
 			horarioRuta.setTimeZoneOrigen(UtilIvDto.obtenerTimeZoneLocal());
 			horarioRuta.setIdUsuarioModificacion(1);
 			horarioRuta.setIdUsuarioRegistro(1);
-			
-			horarioRuta.setId(1);
+			horarioRuta.setId(104);
 			horariosRuta2.add(horarioRuta);
 			
-			horarioRuta.setId(2);
+			horarioRuta = new HorarioRutaDto();
+			horarioRuta.setAerolineaDto(aerolineaDto);
+			horarioRuta.setEquipaBodega(true);
+			horarioRuta.setEquipaBodegaEjecutivo(true);
+			horarioRuta.setEquipaCarrion(true);
+			horarioRuta.setEquipaMochila(true);
+			horarioRuta.setFechaLlegadaVuelo(UtilIvDto.parseStringADate("05/11/2022 14:23:52", Constantes.FORMAT_DATE_1, null));
+			horarioRuta.setFechaModificacion(UtilIvDto.hoy());
+			horarioRuta.setFechaRegistro(UtilIvDto.hoy());
+			horarioRuta.setFechaSalidaVuelo(UtilIvDto.parseStringADate("05/11/2022 06:05:11", Constantes.FORMAT_DATE_1, null));
+			horarioRuta.setIdEstadoRegistro(1);
+			horarioRuta.setTimeZoneLlegada(UtilIvDto.obtenerTimeZoneLocal());
+			horarioRuta.setTimeZoneOrigen(UtilIvDto.obtenerTimeZoneLocal());
+			horarioRuta.setIdUsuarioModificacion(1);
+			horarioRuta.setIdUsuarioRegistro(1);
+			horarioRuta.setId(105);
 			horariosRuta2.add(horarioRuta);
 			
 			List<RutaTramoDto> listaRutaTramos = new ArrayList<RutaTramoDto>();
@@ -323,10 +337,14 @@ public class DestinoCiudadCatalogoServiceImpl implements DestinoCiudadCatalogoSe
 			BigDecimal totalRuta = UtilIvDto.redondeA2(totalBoletos.add(totalImptosCargos));
 			precioOferta.setTotalRuta(totalRuta);
 			
+			log.info("listaRutaTramos :"+listaRutaTramos.size());
+			
 			oferta1.setListaRutaTramos(listaRutaTramos);
 			oferta1.setPrecioOfertaDto(precioOferta);
 			oferta1.setId(1);
 			
+			listaOfertasEncontradas.add(oferta1);
+			listaOfertasEncontradas.add(oferta1);
 			listaOfertasEncontradas.add(oferta1);
 			
 			vuelosEncontrados.setOfertasEncontradas(listaOfertasEncontradas);

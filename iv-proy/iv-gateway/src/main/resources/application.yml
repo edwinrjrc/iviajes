@@ -8,8 +8,11 @@ spring:
 server:
   port: 7000
 
-  
 zuul:
+  # Esto ignora encabezados de seguridad que puedan venir de los servicios de atrás
+  ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin, Access-Control-Allow-Methods, Access-Control-Allow-Headers
+  sensitive-headers: Cookie,Set-Cookie
+
   routes:
     serv-jpa-destinos:
         path: /iv-jpa-destinos/**
@@ -17,6 +20,23 @@ zuul:
     serv-neg-viajes:
         path: /iv-service-viajes/**
         serviceId: iv-service-viajes
+        stripPrefix: false
+
+# Tiempos de espera para el balanceador Ribbon (Muy importante)
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 15000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 1
+
+# Si usas Hystrix (que viene por defecto con Zuul antiguo)
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
  
 #Eureka Configuration Properties
 eureka: 
