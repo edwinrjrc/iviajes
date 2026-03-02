@@ -13,5 +13,6 @@
   	<module>iv-gateway</module>
   	<module>iv-eureka-server</module>
   	<module>iv-service-token</module>
+  	<module>iv-config-server</module>
   </modules>
 </project>

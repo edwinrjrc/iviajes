@@ -21,6 +21,10 @@ zuul:
         path: /iv-service-viajes/**
         serviceId: iv-service-viajes
         stripPrefix: false
+    serv-sec-token:
+      path: /auth/**
+      serviceId: iv-service-token
+      stripPrefix: false
 
 # Tiempos de espera para el balanceador Ribbon (Muy importante)
 ribbon:
