@@ -1,49 +1,59 @@
 info:
- component: iv-gateway
+  component: iv-gateway
+
+server:
+  port: 7000
 
 spring:
   application:
     name: iv-gateway
-    
-server:
-  port: 7000
+  cloud:
+    gateway:
+      # Configuración de Rutas (Reemplaza a zuul.routes)
+      routes:
+        - id: serv-jpa-destinos
+          uri: lb://iv-jpa-destinos
+          predicates:
+            - Path=/iv-jpa-destinos/**
+          filters:
+            - StripPrefix=0 # Equivalente a stripPrefix: false
 
-zuul:
-  # Esto ignora encabezados de seguridad que puedan venir de los servicios de atrás
-  ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin, Access-Control-Allow-Methods, Access-Control-Allow-Headers
-  sensitive-headers: Cookie,Set-Cookie
+        - id: serv-neg-viajes
+          uri: lb://iv-service-viajes
+          predicates:
+            - Path=/iv-service-viajes/**
+          filters:
+            - StripPrefix=0
 
-  routes:
-    serv-jpa-destinos:
-        path: /iv-jpa-destinos/**
-        serviceId: iv-jpa-destinos
-    serv-neg-viajes:
-        path: /iv-service-viajes/**
-        serviceId: iv-service-viajes
-        stripPrefix: false
-    serv-sec-token:
-      path: /auth/**
-      serviceId: iv-service-token
-      stripPrefix: false
+        - id: serv-sec-token
+          uri: lb://iv-service-token
+          predicates:
+            - Path=/auth/**
+          filters:
+            - StripPrefix=0
 
-# Tiempos de espera para el balanceador Ribbon (Muy importante)
-ribbon:
-  ReadTimeout: 60000
-  ConnectTimeout: 15000
-  MaxAutoRetries: 0
-  MaxAutoRetriesNextServer: 1
+      # Reemplazo de ignored-headers y sensitive-headers
+      # Gateway permite manejar el CORS y cabeceras de forma nativa
+      default-filters:
+        - RemoveRequestHeader=Cookie
+        - RemoveRequestHeader=Set-Cookie
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin Access-Control-Allow-Methods Access-Control-Allow-Headers
 
-# Si usas Hystrix (que viene por defecto con Zuul antiguo)
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 60000
- 
-#Eureka Configuration Properties
-eureka: 
+# Configuración de tiempos de espera (Reemplaza a Ribbon/Hystrix)
+# En Spring Boot 3 se configura en el cliente HTTP (por defecto es HttpClient)
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:
+        sliding-window-size: 10
+        failure-rate-threshold: 50
+        wait-duration-in-open-state: 10000
+  timelimiter:
+    configs:
+      default:
+        timeout-duration: 60s # Equivalente a tus 60000ms de Ribbon
+
+eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka

@@ -64,7 +64,7 @@ public class RemoteServiceDestinoCiudad {
 			
 			ResponseEntity<Map> respuesta = restTemplate.exchange(builderURI.toUriString(), metodoServicio, requestEntity, responseType);
 			
-			HttpStatus codigoStatus = respuesta.getStatusCode();
+			HttpStatus codigoStatus = (HttpStatus) respuesta.getStatusCode();
 			
 			if (!HttpStatus.NO_CONTENT.equals(codigoStatus)) {
 				ObjectMapper mapper = obtenerMapper();
