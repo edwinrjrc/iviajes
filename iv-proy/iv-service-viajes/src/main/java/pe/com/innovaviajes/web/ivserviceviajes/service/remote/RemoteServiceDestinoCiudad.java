@@ -16,6 +16,7 @@ import java.util.TimeZone;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -47,6 +48,7 @@ public class RemoteServiceDestinoCiudad {
 	private static final String URL_SERVICE_1 = "http://iv-jpa-destinos/DestinoCiudadJPAService/destinosCiudad";
 
 	@Autowired
+	@Lazy
 	private RestTemplate restTemplate;
 	
 	@SuppressWarnings("rawtypes")

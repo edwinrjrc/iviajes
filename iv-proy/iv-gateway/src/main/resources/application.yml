@@ -1,59 +1,10 @@
-info:
-  component: iv-gateway
-
-server:
-  port: 7000
-
 spring:
   application:
     name: iv-gateway
+  config:
+    import: "optional:configserver:http://localhost:8888" # Esto reemplaza la uri antigua
   cloud:
-    gateway:
-      # Configuración de Rutas (Reemplaza a zuul.routes)
-      routes:
-        - id: serv-jpa-destinos
-          uri: lb://iv-jpa-destinos
-          predicates:
-            - Path=/iv-jpa-destinos/**
-          filters:
-            - StripPrefix=0 # Equivalente a stripPrefix: false
-
-        - id: serv-neg-viajes
-          uri: lb://iv-service-viajes
-          predicates:
-            - Path=/iv-service-viajes/**
-          filters:
-            - StripPrefix=0
-
-        - id: serv-sec-token
-          uri: lb://iv-service-token
-          predicates:
-            - Path=/auth/**
-          filters:
-            - StripPrefix=0
-
-      # Reemplazo de ignored-headers y sensitive-headers
-      # Gateway permite manejar el CORS y cabeceras de forma nativa
-      default-filters:
-        - RemoveRequestHeader=Cookie
-        - RemoveRequestHeader=Set-Cookie
-        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin Access-Control-Allow-Methods Access-Control-Allow-Headers
-
-# Configuración de tiempos de espera (Reemplaza a Ribbon/Hystrix)
-# En Spring Boot 3 se configura en el cliente HTTP (por defecto es HttpClient)
-resilience4j:
-  circuitbreaker:
-    configs:
-      default:
-        sliding-window-size: 10
-        failure-rate-threshold: 50
-        wait-duration-in-open-state: 10000
-  timelimiter:
-    configs:
-      default:
-        timeout-duration: 60s # Equivalente a tus 60000ms de Ribbon
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka
+    config:
+      username: iv-admin
+      password: iv-admin
+      fail-fast: true

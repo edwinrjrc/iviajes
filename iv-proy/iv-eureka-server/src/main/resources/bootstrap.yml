@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: iv-eureka-server
+  cloud:
+    config:
+      # URL donde corre tu microservicio iv-config-server
+      uri: http://localhost:8888 
+      # Si pusiste seguridad en el config-server, añade estas líneas:
+      username: iv-admin
+      password: iv-admin

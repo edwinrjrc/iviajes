@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: iv-service-viajes
+  config:
+    import: "optional:configserver:http://${CONFIG_SERVER_USER}:${CONFIG_SERVER_PWD}@localhost:8888"
+  main:
+    allow-bean-definition-overriding: true
+
+# El puerto y el context-path pueden quedarse aquí o ir al Git. 
+# Si los dejas aquí, es más fácil de probar en local.
+server: 
+  port: 24209
+  servlet:
+    context-path: /iv-service-viajes

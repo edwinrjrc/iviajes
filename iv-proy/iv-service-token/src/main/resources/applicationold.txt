@@ -1,0 +1,21 @@
+server:
+  port: 8081  # Es importante definir un puerto distinto al de Eureka (8761)
+
+spring:
+  application:
+    name: iv-service-token
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true
+
+jwt:
+  # Lee la variable de entorno JWT_SECRET. 
+  # Si no existe, puedes poner un valor por defecto después de los dos puntos (opcional)
+  secret: ${JWT_SECRET}
+  expiration: 3600000 # 1 hora en milisegundos

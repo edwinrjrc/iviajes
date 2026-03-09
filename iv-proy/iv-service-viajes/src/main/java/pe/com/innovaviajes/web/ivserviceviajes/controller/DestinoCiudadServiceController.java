@@ -39,6 +39,7 @@ public class DestinoCiudadServiceController {
 	
 	@GetMapping(value = "/destinoCiudadService")
 	public ResponseEntity<Map<String, Object>> obtenerDestinos(@RequestParam(name = "nombreDestino", required = false) String nombreDestino) {
+		log.info(">>> CONTROLADOR - Entrando a obtenerDestinos con parametro: {}", nombreDestino);
 		ResponseEntity<Map<String, Object>> salida = null;
 		Map<String, Object> mapeo = null;
 		HttpStatus status = null;

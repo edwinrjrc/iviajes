@@ -52,19 +52,6 @@ public class DestinoCiudadCatalogoServiceImpl implements DestinoCiudadCatalogoSe
 	@Autowired
 	private RemoteServiceDestinoCiudad remoteServiceDestinoCiudad;
 
-	@Bean
-	@LoadBalanced
-	public RestTemplate restTemplate() throws IvServiceDestinoCiudadException {
-		try {
-			RestTemplate restTemplate = new RestTemplate();
-			restTemplate.getMessageConverters().add(0, new StringHttpMessageConverter(StandardCharsets.UTF_8));
-			
-			return restTemplate;
-		} catch (Exception e) {
-			log.error(e.getMessage(),e);
-			throw new IvServiceDestinoCiudadException(e);
-		}
-	}
 	
 	@Override
 	public List<AeropuertoWebMostrarDto> consultaDestinos(String nombreDestino) throws IvServiceDestinoCiudadException {
