@@ -29,6 +29,7 @@ public class JwtProvider {
 	@Value("${jwt.expiration:3600000}")
 	private int expiration;
 
+	@SuppressWarnings("unused")
 	private Key getSigningKey() {
 		return Keys.hmacShaKeyFor(secret.getBytes());
 	}

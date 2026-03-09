@@ -16,7 +16,8 @@ import org.slf4j.LoggerFactory;
 
 public class UtilConversionS {
     
-    private static final Logger log = LoggerFactory.getLogger(UtilConversionS.class);
+    @SuppressWarnings("unused")
+	private static final Logger log = LoggerFactory.getLogger(UtilConversionS.class);
     public static final int CRYPTO_AUTH_TAG_LENGTH = 128;
     public static final int CRYPTO_IV_LENGTH = 12;
     private String llave = "P@s$W0(Contr3n@)"; // Esta es tu "chapa" simétrica
