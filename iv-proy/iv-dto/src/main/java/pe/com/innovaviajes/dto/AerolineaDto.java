@@ -15,6 +15,9 @@ public class AerolineaDto extends BaseDto {
 	
 	private String codigoIata;
 	
+	/**
+	 * Nombre de la aerolinea
+	 */
 	private String nombre;
 	
 	private String nombreCorto;

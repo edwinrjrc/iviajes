@@ -344,7 +344,6 @@ public class DestinoCiudadCatalogoServiceImpl implements DestinoCiudadCatalogoSe
 		String fecha = "20/05/2027 14:16:05";
 		
 		Date fechaHora = UtilIvDto.parseStringADate(fecha, Constantes.FORMAT_DATE_1, null);
-
 		return fechaHora;
 	}
 
@@ -354,7 +353,7 @@ public class DestinoCiudadCatalogoServiceImpl implements DestinoCiudadCatalogoSe
 		cal.setTime(fechaHoraSalida);
 		
 		cal.add(Calendar.DATE, 123);
-		cal.add(Calendar.MINUTE, 1500);
+		cal.add(Calendar.MINUTE, 1600);
 
 		return cal.getTime();
 	}
