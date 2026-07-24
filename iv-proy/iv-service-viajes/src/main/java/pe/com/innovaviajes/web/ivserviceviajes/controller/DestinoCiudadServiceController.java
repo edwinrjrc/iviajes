@@ -34,6 +34,9 @@ public class DestinoCiudadServiceController {
 
 	private static final Logger log = LoggerFactory.getLogger(DestinoCiudadServiceController.class);
 	
+	private String variableMapError = "error";
+	private String variableMapMensaje = "mensaje";
+	
 	@Autowired
 	private DestinoCiudadCatalogoService destinoCiudadCatalogoService;
 	
@@ -54,8 +57,8 @@ public class DestinoCiudadServiceController {
 				status = HttpStatus.OK;
 			}
 			mapeo = new HashMap<String, Object>();
-			mapeo.put("error", false);
-			mapeo.put("mensaje", "Existo");
+			mapeo.put(variableMapError, false);
+			mapeo.put(variableMapMensaje, "Existo");
 			mapeo.put(Constantes.VALOR_DATA_MAP, listaAeropuertos);
 
 		} catch (IvServiceDestinoCiudadException e) {
@@ -63,15 +66,15 @@ public class DestinoCiudadServiceController {
 			status = HttpStatus.INTERNAL_SERVER_ERROR;
 
 			mapeo = new HashMap<String, Object>();
-			mapeo.put("error", true);
-			mapeo.put("mensaje", "Operacion no completada");
+			mapeo.put(variableMapError, true);
+			mapeo.put(variableMapMensaje, "Operacion no completada");
 		} catch (Exception e) {
 			log.error(e.getMessage(), e);
 			status = HttpStatus.INTERNAL_SERVER_ERROR;
 
 			mapeo = new HashMap<String, Object>();
-			mapeo.put("error", true);
-			mapeo.put("mensaje", "Operacion no completada");
+			mapeo.put(variableMapError, true);
+			mapeo.put(variableMapMensaje, "Operacion no completada");
 		}
 
 		salida = new ResponseEntity<Map<String, Object>>(mapeo, status);

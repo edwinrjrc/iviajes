@@ -21,7 +21,6 @@ public class ConsultaViajeDto {
 	private Integer ninos;
 	private Integer infantes;
 	
-	
 	/**
 	 * @return the tipoViaje
 	 */
@@ -130,6 +129,5 @@ public class ConsultaViajeDto {
 	public void setInfantes(Integer infantes) {
 		this.infantes = infantes;
 	}
-	
 	
 }

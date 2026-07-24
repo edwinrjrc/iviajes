@@ -19,4 +19,14 @@ public class Constantes {
 	
 	public static final String FORMAT_DATE_1 = "dd/MM/yyyy HH:mm:ss";
 	
+	public static final String FORMAT_DATE_2 = "dd/MM/yyyy";
+	
+	public static final String VALOR_FLG_ERROR = "error";
+	
+	public static final String VALOR_DATA_MSJE = "mensaje";
+	
+	public static final String VALOR_DATA_MSJE_EXITO = "Exito";
+	
+	public static final String VALOR_DATA_MSJE_ERROR = "Operacion no completada";
+	
 }

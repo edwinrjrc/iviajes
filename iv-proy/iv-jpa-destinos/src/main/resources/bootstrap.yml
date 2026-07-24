@@ -6,3 +6,6 @@ spring:
       uri: http://localhost:8888
       username: iv-admin
       password: iv-admin
+      
+encrypt:
+  key: ${ENCRYPT_KEY}
