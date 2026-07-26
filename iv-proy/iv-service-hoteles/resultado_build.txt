@@ -1,0 +1,215 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------< pe.com.innovaviajes.web:iv-service-viajes >--------------
+[INFO] Building iv-service-viajes 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.3.2:clean (default-clean) @ iv-service-viajes ---
+[INFO] Deleting C:\git\iviajes\iv-proy\iv-service-viajes\target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ iv-service-viajes ---
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.11.0:compile (default-compile) @ iv-service-viajes ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 14 source files with javac [debug release 17] to target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:testResources (default-testResources) @ iv-service-viajes ---
+[INFO] skip non existing resourceDirectory C:\git\iviajes\iv-proy\iv-service-viajes\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.11.0:testCompile (default-testCompile) @ iv-service-viajes ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 2 source files with javac [debug release 17] to target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.1.2:test (default-test) @ iv-service-viajes ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running pe.com.innovaviajes.web.ivserviceviajes.controller.ViajeServiceControllerTest
+14:26:28.313 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [pe.com.innovaviajes.web.ivserviceviajes.controller.ViajeServiceControllerTest]: ViajeServiceControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:26:28.527 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration pe.com.innovaviajes.web.ivserviceviajes.IvServiceViajesApplication for test class pe.com.innovaviajes.web.ivserviceviajes.controller.ViajeServiceControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.4)
+
+2026-03-17T14:26:30.537-05:00  INFO 20168 --- [iv-service-viajes] [           main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2026-03-17T14:26:31.011-05:00  INFO 20168 --- [iv-service-viajes] [           main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=iv-service-viajes, profiles=[default], label=null, version=null, state=null
+2026-03-17T14:26:31.011-05:00  INFO 20168 --- [iv-service-viajes] [           main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-file:/D:/claves/iv-service-viajes.yml'}, BootstrapPropertySource {name='bootstrapProperties-file:/D:/claves/application.yml'}]
+2026-03-17T14:26:31.075-05:00  INFO 20168 --- [iv-service-viajes] [           main] p.c.i.w.i.c.ViajeServiceControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2026-03-17T14:26:31.075-05:00 DEBUG 20168 --- [iv-service-viajes] [           main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@73437222
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2026-03-17T14:26:34.486-05:00 DEBUG 20168 --- [iv-service-viajes] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2026-03-17T14:26:34.686-05:00 DEBUG 20168 --- [iv-service-viajes] [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-03-17T14:26:35.085-05:00 DEBUG 20168 --- [iv-service-viajes] [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-03-17T14:26:35.175-05:00 DEBUG 20168 --- [iv-service-viajes] [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-03-17T14:26:35.448-05:00 DEBUG 20168 --- [iv-service-viajes] [           main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2026-03-17T14:26:35.661-05:00  INFO 20168 --- [iv-service-viajes] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@98722ef, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@459e120b, org.springframework.security.web.context.SecurityContextHolderFilter@61836cd9, org.springframework.security.web.header.HeaderWriterFilter@35a9e665, org.springframework.web.filter.CorsFilter@fd69983, org.springframework.security.web.csrf.CsrfFilter@5a2035e1, org.springframework.security.web.authentication.logout.LogoutFilter@16949dfa, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@43f99817, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@19e801b5, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@22429a11, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4ff074a0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7227926b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2f75a9b1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@126254ec, org.springframework.security.web.access.ExceptionTranslationFilter@647ff23e, org.springframework.security.web.access.intercept.AuthorizationFilter@56499781]
+2026-03-17T14:26:35.743-05:00 DEBUG 20168 --- [iv-service-viajes] [           main] p.c.i.w.i.config.SecurityDebugFilter     : Filter 'securityDebugFilter' configured for use
+2026-03-17T14:26:35.761-05:00  INFO 20168 --- [iv-service-viajes] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-03-17T14:26:35.761-05:00  INFO 20168 --- [iv-service-viajes] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-03-17T14:26:35.765-05:00  INFO 20168 --- [iv-service-viajes] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-03-17T14:26:35.809-05:00  INFO 20168 --- [iv-service-viajes] [           main] p.c.i.w.i.c.ViajeServiceControllerTest   : Started ViajeServiceControllerTest in 7.106 seconds (process running for 8.712)
+2026-03-17T14:26:35.984-05:00 DEBUG 20168 --- [iv-service-viajes] [           main] w.c.HttpSessionSecurityContextRepository : Created HttpSession as SecurityContext is non-default
+2026-03-17T14:26:35.984-05:00 DEBUG 20168 --- [iv-service-viajes] [           main] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]] to HttpSession [org.springframework.mock.web.MockHttpSession@76ed7573]
+2026-03-17T14:26:36.018-05:00 DEBUG 20168 --- [iv-service-viajes] [           main] o.s.security.web.FilterChainProxy        : Securing POST /viajeService/vuelosCotizacion
+2026-03-17T14:26:36.033-05:00 DEBUG 20168 --- [iv-service-viajes] [           main] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]]
+2026-03-17T14:26:36.035-05:00 DEBUG 20168 --- [iv-service-viajes] [           main] o.s.security.web.FilterChainProxy        : Secured POST /viajeService/vuelosCotizacion
+2026-03-17T14:26:36.035-05:00  INFO 20168 --- [iv-service-viajes] [           main] p.c.i.w.i.config.SecurityDebugFilter     : >>> MICROSERVICIO - Recibiendo: POST /viajeService/vuelosCotizacion
+2026-03-17T14:26:36.035-05:00  INFO 20168 --- [iv-service-viajes] [           main] p.c.i.w.i.config.SecurityDebugFilter     : >>> MICROSERVICIO - Authorization Header: null
+2026-03-17T14:26:36.035-05:00 DEBUG 20168 --- [iv-service-viajes] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to pe.com.innovaviajes.web.ivserviceviajes.controller.ViajeServiceController#consultarViaje2(ConsultaViajeWebDto)
+2026-03-17T14:26:36.078-05:00 DEBUG 20168 --- [iv-service-viajes] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [pe.com.innovaviajes.dto.ConsultaViajeWebDto@4544ab46]
+2026-03-17T14:26:36.090-05:00  INFO 20168 --- [iv-service-viajes] [           main] p.c.i.w.i.c.ViajeServiceController       : Iniciando cotización - Origen: null Destino: null
+2026-03-17T14:26:36.114-05:00 DEBUG 20168 --- [iv-service-viajes] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler pe.com.innovaviajes.web.ivserviceviajes.exception.IvGlobalExceptionHandler#handleUtilIvDtoException(UtilIvDtoException)
+2026-03-17T14:26:36.114-05:00 ERROR 20168 --- [iv-service-viajes] [           main] p.c.i.w.i.e.IvGlobalExceptionHandler     : Error en procesamiento de datos (UtilIvDto): La fecha a convertir esta en blanco o es nula
+2026-03-17T14:26:36.146-05:00 DEBUG 20168 --- [iv-service-viajes] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-03-17T14:26:36.146-05:00 DEBUG 20168 --- [iv-service-viajes] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [pe.com.innovaviajes.dto.ErrorResponseDto@4caf875c]
+2026-03-17T14:26:36.162-05:00 DEBUG 20168 --- [iv-service-viajes] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [pe.com.innovaviajes.exception.UtilIvDtoException: La fecha a convertir esta en blanco o es nula]
+2026-03-17T14:26:36.162-05:00  INFO 20168 --- [iv-service-viajes] [           main] p.c.i.w.i.config.SecurityDebugFilter     : >>> MICROSERVICIO - Usuario Autenticado: user
+2026-03-17T14:26:36.162-05:00  INFO 20168 --- [iv-service-viajes] [           main] p.c.i.w.i.config.SecurityDebugFilter     : >>> MICROSERVICIO - Autoridades: [ROLE_USER]
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /viajeService/vuelosCotizacion
+       Parameters = {_csrf=[iLEBcsA8ENoRXr2P0hiRZ-GGSF9qYYciU-CjSVv6h-tTZHx_vYcwE_MEKLk8Pdm-tzWlBYDlZT4IULMPZoKVfmLCsN1nAUtH]}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"76"]
+             Body = {"fechaIdaStr": "2026/13/40", "adultos": "1", "ninos": "0", "infantes": "0"}
+    Session Attrs = {SPRING_SECURITY_CONTEXT=SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]]}
+
+Handler:
+             Type = pe.com.innovaviajes.web.ivserviceviajes.controller.ViajeServiceController
+           Method = pe.com.innovaviajes.web.ivserviceviajes.controller.ViajeServiceController#consultarViaje2(ConsultaViajeWebDto)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = pe.com.innovaviajes.exception.UtilIvDtoException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = application/json
+             Body = {"status":400,"mensaje":"El formato de las fechas o datos de viaje es incorrecto.","error":true,"timestamp":1773775596114}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.317 s -- in pe.com.innovaviajes.web.ivserviceviajes.controller.ViajeServiceControllerTest
+[INFO] Running pe.com.innovaviajes.web.ivserviceviajes.IvServiceViajesApplicationTests
+2026-03-17T14:26:36.359-05:00  INFO 20168 --- [iv-service-viajes] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [pe.com.innovaviajes.web.ivserviceviajes.IvServiceViajesApplicationTests]: IvServiceViajesApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-17T14:26:36.394-05:00  INFO 20168 --- [iv-service-viajes] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration pe.com.innovaviajes.web.ivserviceviajes.IvServiceViajesApplication for test class pe.com.innovaviajes.web.ivserviceviajes.IvServiceViajesApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.4)
+
+2026-03-17T14:26:37.255-05:00  INFO 20168 --- [iv-service-viajes] [           main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2026-03-17T14:26:37.869-05:00  INFO 20168 --- [iv-service-viajes] [           main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=iv-service-viajes, profiles=[default], label=null, version=null, state=null
+2026-03-17T14:26:37.869-05:00  INFO 20168 --- [iv-service-viajes] [           main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-file:/D:/claves/iv-service-viajes.yml'}, BootstrapPropertySource {name='bootstrapProperties-file:/D:/claves/application.yml'}]
+2026-03-17T14:26:37.883-05:00  INFO 20168 --- [iv-service-viajes] [           main] .c.i.w.i.IvServiceViajesApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2026-03-17T14:26:37.883-05:00 DEBUG 20168 --- [iv-service-viajes] [           main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@288b73c1
+2026-03-17T14:26:39.104-05:00  INFO 20168 --- [iv-service-viajes] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ee0f747f-347e-3589-8403-8480170b6d8c
+2026-03-17T14:26:39.185-05:00  WARN 20168 --- [iv-service-viajes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-17T14:26:39.187-05:00  WARN 20168 --- [iv-service-viajes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T14:26:39.189-05:00  WARN 20168 --- [iv-service-viajes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T14:26:39.197-05:00  WARN 20168 --- [iv-service-viajes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T14:26:39.199-05:00  WARN 20168 --- [iv-service-viajes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T14:26:39.201-05:00  WARN 20168 --- [iv-service-viajes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$1310/0x00000008012e5ee8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T14:26:39.203-05:00  WARN 20168 --- [iv-service-viajes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T14:26:39.213-05:00  WARN 20168 --- [iv-service-viajes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.loadbalancer-org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T14:26:39.213-05:00  WARN 20168 --- [iv-service-viajes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T14:26:39.213-05:00  WARN 20168 --- [iv-service-viajes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T14:26:39.213-05:00  WARN 20168 --- [iv-service-viajes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.netflix.eureka.loadbalancer.LoadBalancerEurekaAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T14:26:39.223-05:00  WARN 20168 --- [iv-service-viajes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientFactory' of type [org.springframework.cloud.loadbalancer.support.LoadBalancerClientFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T14:26:39.225-05:00  WARN 20168 --- [iv-service-viajes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'blockingLoadBalancerClient' of type [org.springframework.cloud.loadbalancer.blocking.client.BlockingLoadBalancerClient] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T14:26:39.227-05:00  WARN 20168 --- [iv-service-viajes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'restTemplateConfig' of type [pe.com.innovaviajes.web.ivserviceviajes.config.RestTemplateConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T14:26:39.227-05:00  WARN 20168 --- [iv-service-viajes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'restTemplate' of type [org.springframework.web.client.RestTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T14:26:39.227-05:00  WARN 20168 --- [iv-service-viajes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerServiceInstanceCookieTransformer' of type [org.springframework.cloud.loadbalancer.core.LoadBalancerServiceInstanceCookieTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T14:26:39.227-05:00  WARN 20168 --- [iv-service-viajes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'xForwarderHeadersTransformer' of type [org.springframework.cloud.loadbalancer.blocking.XForwardedHeadersTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T14:26:39.227-05:00  WARN 20168 --- [iv-service-viajes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T14:26:39.227-05:00  WARN 20168 --- [iv-service-viajes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerRequestFactory' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerRequestFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T14:26:39.227-05:00  WARN 20168 --- [iv-service-viajes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+***************************************************
+INSTANCIANDO CONFIGURACIÓN DE SEGURIDAD - INNOVA VIAJES
+***************************************************
+2026-03-17T14:26:39.448-05:00 DEBUG 20168 --- [iv-service-viajes] [           main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2026-03-17T14:26:39.643-05:00 DEBUG 20168 --- [iv-service-viajes] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2026-03-17T14:26:39.693-05:00 DEBUG 20168 --- [iv-service-viajes] [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-03-17T14:26:40.122-05:00  INFO 20168 --- [iv-service-viajes] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2026-03-17T14:26:40.148-05:00  INFO 20168 --- [iv-service-viajes] [           main] p.c.i.w.i.config.SecurityConfig          : Cargando SecurityConfig - Secret disponible: true
+2026-03-17T14:26:40.238-05:00  INFO 20168 --- [iv-service-viajes] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@714d7c7b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@72ad577b, org.springframework.security.web.context.SecurityContextHolderFilter@5e1e19af, org.springframework.security.web.header.HeaderWriterFilter@3338d29d, org.springframework.web.filter.CorsFilter@99948fe, org.springframework.security.web.authentication.logout.LogoutFilter@6e757f39, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@2ebd6a0d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3792fed8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@35d145fb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4c31b6c2, org.springframework.security.web.access.ExceptionTranslationFilter@260043d, org.springframework.security.web.access.intercept.AuthorizationFilter@ad6255e]
+2026-03-17T14:26:40.405-05:00 DEBUG 20168 --- [iv-service-viajes] [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-03-17T14:26:40.413-05:00 DEBUG 20168 --- [iv-service-viajes] [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-03-17T14:26:40.805-05:00  INFO 20168 --- [iv-service-viajes] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-03-17T14:26:40.865-05:00  WARN 20168 --- [iv-service-viajes] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-17T14:26:41.015-05:00  INFO 20168 --- [iv-service-viajes] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-03-17T14:26:41.207-05:00  INFO 20168 --- [iv-service-viajes] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-03-17T14:26:41.226-05:00  INFO 20168 --- [iv-service-viajes] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T14:26:41.302-05:00  INFO 20168 --- [iv-service-viajes] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-03-17T14:26:41.302-05:00  INFO 20168 --- [iv-service-viajes] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-03-17T14:26:41.302-05:00  INFO 20168 --- [iv-service-viajes] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-03-17T14:26:41.302-05:00  INFO 20168 --- [iv-service-viajes] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-03-17T14:26:41.302-05:00  INFO 20168 --- [iv-service-viajes] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-03-17T14:26:41.302-05:00  INFO 20168 --- [iv-service-viajes] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-03-17T14:26:41.302-05:00  INFO 20168 --- [iv-service-viajes] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-03-17T14:26:41.684-05:00 DEBUG 20168 --- [iv-service-viajes] [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/
+2026-03-17T14:26:41.802-05:00 DEBUG 20168 --- [iv-service-viajes] [           main] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2026-03-17T14:26:41.885-05:00 DEBUG 20168 --- [iv-service-viajes] [           main] o.s.web.client.RestTemplate              : Response 200 OK
+2026-03-17T14:26:41.887-05:00 DEBUG 20168 --- [iv-service-viajes] [           main] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-03-17T14:26:41.904-05:00  INFO 20168 --- [iv-service-viajes] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-03-17T14:26:41.913-05:00  INFO 20168 --- [iv-service-viajes] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-03-17T14:26:41.920-05:00  INFO 20168 --- [iv-service-viajes] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-03-17T14:26:41.926-05:00  INFO 20168 --- [iv-service-viajes] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1773775601926 with initial instances count: 4
+2026-03-17T14:26:41.933-05:00  INFO 20168 --- [iv-service-viajes] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application IV-SERVICE-VIAJES with eureka with status UP
+2026-03-17T14:26:41.933-05:00  INFO 20168 --- [iv-service-viajes] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1773775601933, current=UP, previous=STARTING]
+2026-03-17T14:26:41.933-05:00  INFO 20168 --- [iv-service-viajes] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_IV-SERVICE-VIAJES/edwinLaptop:iv-service-viajes:8083: registering service...
+2026-03-17T14:26:41.944-05:00 DEBUG 20168 --- [iv-service-viajes] [nfoReplicator-0] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/IV-SERVICE-VIAJES
+2026-03-17T14:26:41.944-05:00 DEBUG 20168 --- [iv-service-viajes] [nfoReplicator-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2026-03-17T14:26:41.952-05:00 DEBUG 20168 --- [iv-service-viajes] [nfoReplicator-0] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = edwinLaptop:iv-service-viajes:8083, appName = IV-SERVICE-VIAJES, hostName = 10.179.144.222, status = UP, ipAddr = 10.179.144.222, port = 8083, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@4b69bf2a] as "application/json"
+2026-03-17T14:26:41.967-05:00  INFO 20168 --- [iv-service-viajes] [           main] .c.i.w.i.IvServiceViajesApplicationTests : Started IvServiceViajesApplicationTests in 5.548 seconds (process running for 14.868)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.634 s -- in pe.com.innovaviajes.web.ivserviceviajes.IvServiceViajesApplicationTests
+2026-03-17T14:26:42.020-05:00 DEBUG 20168 --- [iv-service-viajes] [nfoReplicator-0] o.s.web.client.RestTemplate              : Response 204 NO_CONTENT
+2026-03-17T14:26:42.020-05:00  INFO 20168 --- [iv-service-viajes] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_IV-SERVICE-VIAJES/edwinLaptop:iv-service-viajes:8083 - registration status: 204
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-jar-plugin:3.3.0:jar (default-jar) @ iv-service-viajes ---
+[INFO] Building jar: C:\git\iviajes\iv-proy\iv-service-viajes\target\iv-service-viajes-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:3.2.4:repackage (repackage) @ iv-service-viajes ---
+[INFO] Replacing main artifact C:\git\iviajes\iv-proy\iv-service-viajes\target\iv-service-viajes-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\git\iviajes\iv-proy\iv-service-viajes\target\iv-service-viajes-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- maven-install-plugin:3.1.1:install (default-install) @ iv-service-viajes ---
+[INFO] Installing C:\git\iviajes\iv-proy\iv-service-viajes\pom.xml to C:\Users\Edwin\.m2\repository\pe\com\innovaviajes\web\iv-service-viajes\0.0.1-SNAPSHOT\iv-service-viajes-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\git\iviajes\iv-proy\iv-service-viajes\target\iv-service-viajes-0.0.1-SNAPSHOT.jar to C:\Users\Edwin\.m2\repository\pe\com\innovaviajes\web\iv-service-viajes\0.0.1-SNAPSHOT\iv-service-viajes-0.0.1-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  27.148 s
+[INFO] Finished at: 2026-03-17T14:26:46-05:00
+[INFO] ------------------------------------------------------------------------

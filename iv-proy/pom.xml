@@ -10,6 +10,7 @@
   	<module>iv-dto</module>
   	<module>iv-jpa-destinos</module>
   	<module>iv-service-viajes</module>
+      <module>iv-service-hoteles</module>
   	<module>iv-gateway</module>
   	<module>iv-eureka-server</module>
   	<module>iv-service-token</module>
