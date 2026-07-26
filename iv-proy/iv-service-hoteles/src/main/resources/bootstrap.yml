@@ -1,9 +1,0 @@
-spring:
-  application:
-    name: iv-service-hoteles
-  cloud:
-    config:
-      uri: http://localhost:8888
-      username: iv-admin
-      password: iv-admin
-      fail-fast: true
