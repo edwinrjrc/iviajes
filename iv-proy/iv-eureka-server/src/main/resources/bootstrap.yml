@@ -3,8 +3,6 @@ spring:
     name: iv-eureka-server
   cloud:
     config:
-      # URL donde corre tu microservicio iv-config-server
-      uri: http://localhost:8888 
-      # Si pusiste seguridad en el config-server, añade estas líneas:
-      username: iv-admin
-      password: iv-admin
+      uri: ${CONFIG_SERVER_URI:http://config-server:8888}
+      username: ${CONFIG_SERVER_USERNAME:iv-admin}
+      password: ${CONFIG_SERVER_PASSWORD:iv-admin}

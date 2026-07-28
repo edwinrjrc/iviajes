@@ -1,5 +1,5 @@
 server:
-  port: 8888
+  port: ${SERVER_PORT:8888}
 
 spring:
   application:
@@ -10,26 +10,21 @@ spring:
     config:
       server:
         native:
-          search-locations: ${RUTA_CONFIG}
+          search-locations: ${RUTA_CONFIG:/config}
     encrypt:
       enabled: false
-  
+
   security:
     user:
-      name: iv-admin
-      password: iv-admin
+      name: ${CONFIG_SERVER_USERNAME:iv-admin}
+      password: ${CONFIG_SERVER_PASSWORD:iv-admin}
 
 eureka:
   client:
-    # Cambia estos dos a 'true'
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: ${EUREKA_URI:http://eureka:8761/eureka/}
 
 encrypt:
-  key: ${ENCRYPT_KEY}
-
-security:
-  rsa:
-    private-key-path: file:D:/claves/k/private_key.pem
+  key: ${ENCRYPT_KEY:}

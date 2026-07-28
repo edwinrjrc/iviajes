@@ -1,8 +1,18 @@
+server:
+  port: ${SERVER_PORT:8081}
+
 spring:
   application:
     name: iv-service-token
   cloud:
     config:
-      uri: http://localhost:8888
-      username: iv-admin
-      password: iv-admin
+      uri: ${CONFIG_SERVER_URI:http://config-server:8888}
+      username: ${CONFIG_SERVER_USERNAME:iv-admin}
+      password: ${CONFIG_SERVER_PASSWORD:iv-admin}
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: ${EUREKA_URI:http://eureka:8761/eureka/}

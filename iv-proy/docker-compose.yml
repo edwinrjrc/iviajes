@@ -1,0 +1,128 @@
+version: '3.9'
+services:
+  frontend:
+    build:
+      context: C:/Server/web/innovaviajesweb/webv1
+      dockerfile: Dockerfile
+    container_name: iv-frontend
+    ports:
+      - "4200:80"
+    depends_on:
+      - gateway
+
+  config-server:
+    build:
+      context: ./iv-config-server
+      dockerfile: Dockerfile
+    container_name: iv-config-server
+    ports:
+      - "8888:8888"
+    environment:
+      SERVER_PORT: 8888
+      RUTA_CONFIG: /config
+      CONFIG_SERVER_USERNAME: iv-admin
+      CONFIG_SERVER_PASSWORD: iv-admin
+      EUREKA_URI: http://eureka:8761/eureka/
+    volumes:
+      - ./config:/config
+    depends_on:
+      - eureka
+
+  eureka:
+    build:
+      context: ./iv-eureka-server
+      dockerfile: Dockerfile
+    container_name: iv-eureka-server
+    ports:
+      - "8761:8761"
+    environment:
+      SERVER_PORT: 8761
+      CONFIG_SERVER_URI: http://config-server:8888
+      CONFIG_SERVER_USERNAME: iv-admin
+      CONFIG_SERVER_PASSWORD: iv-admin
+      EUREKA_URI: http://eureka:8761/eureka/
+
+  gateway:
+    build:
+      context: ./iv-gateway
+      dockerfile: Dockerfile
+    container_name: iv-gateway
+    ports:
+      - "8080:8080"
+    environment:
+      SERVER_PORT: 8080
+      CONFIG_SERVER_URI: http://config-server:8888
+      CONFIG_SERVER_USERNAME: iv-admin
+      CONFIG_SERVER_PASSWORD: iv-admin
+      EUREKA_URI: http://eureka:8761/eureka/
+    depends_on:
+      - config-server
+      - eureka
+
+  service-viajes:
+    build:
+      context: ./iv-service-viajes
+      dockerfile: Dockerfile
+    container_name: iv-service-viajes
+    ports:
+      - "8082:8082"
+    environment:
+      SERVER_PORT: 8082
+      CONFIG_SERVER_URI: http://config-server:8888
+      CONFIG_SERVER_USERNAME: iv-admin
+      CONFIG_SERVER_PASSWORD: iv-admin
+      EUREKA_URI: http://eureka:8761/eureka/
+    depends_on:
+      - config-server
+      - eureka
+
+  service-hoteles:
+    build:
+      context: ./iv-service-hoteles
+      dockerfile: Dockerfile
+    container_name: iv-service-hoteles
+    ports:
+      - "8083:8083"
+    environment:
+      SERVER_PORT: 8083
+      CONFIG_SERVER_URI: http://config-server:8888
+      CONFIG_SERVER_USERNAME: iv-admin
+      CONFIG_SERVER_PASSWORD: iv-admin
+      EUREKA_URI: http://eureka:8761/eureka/
+    depends_on:
+      - config-server
+      - eureka
+
+  service-token:
+    build:
+      context: ./iv-service-token
+      dockerfile: Dockerfile
+    container_name: iv-service-token
+    ports:
+      - "8081:8081"
+    environment:
+      SERVER_PORT: 8081
+      CONFIG_SERVER_URI: http://config-server:8888
+      CONFIG_SERVER_USERNAME: iv-admin
+      CONFIG_SERVER_PASSWORD: iv-admin
+      EUREKA_URI: http://eureka:8761/eureka/
+    depends_on:
+      - config-server
+      - eureka
+
+  jpa-destinos:
+    build:
+      context: ./iv-jpa-destinos
+      dockerfile: Dockerfile
+    container_name: iv-jpa-destinos
+    ports:
+      - "8084:8084"
+    environment:
+      SERVER_PORT: 8084
+      CONFIG_SERVER_URI: http://config-server:8888
+      CONFIG_SERVER_USERNAME: iv-admin
+      CONFIG_SERVER_PASSWORD: iv-admin
+      EUREKA_URI: http://eureka:8761/eureka/
+    depends_on:
+      - config-server
+      - eureka
