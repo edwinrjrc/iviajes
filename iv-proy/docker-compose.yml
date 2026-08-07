@@ -82,9 +82,9 @@ services:
       dockerfile: Dockerfile
     container_name: iv-service-hoteles
     ports:
-      - "8083:8083"
+      - "8085:8085"
     environment:
-      SERVER_PORT: 8083
+      SERVER_PORT: 8085
       CONFIG_SERVER_URI: http://config-server:8888
       CONFIG_SERVER_USERNAME: iv-admin
       CONFIG_SERVER_PASSWORD: iv-admin

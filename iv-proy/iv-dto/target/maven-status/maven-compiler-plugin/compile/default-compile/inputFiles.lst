@@ -7,11 +7,13 @@ C:\git\iviajes\iv-proy\iv-dto\src\main\java\pe\com\innovaviajes\dto\CostoServici
 C:\git\iviajes\iv-proy\iv-dto\src\main\java\pe\com\innovaviajes\dto\DestinoDto.java
 C:\git\iviajes\iv-proy\iv-dto\src\main\java\pe\com\innovaviajes\dto\TramoBaseDto.java
 C:\git\iviajes\iv-proy\iv-dto\src\main\java\pe\com\innovaviajes\dto\HorarioRutaDto.java
+C:\git\iviajes\iv-proy\iv-dto\src\main\java\pe\com\innovaviajes\dto\HotelDisponibleResponse.java
 C:\git\iviajes\iv-proy\iv-dto\src\main\java\pe\com\innovaviajes\dto\AeropuertoWebDto.java
 C:\git\iviajes\iv-proy\iv-dto\src\main\java\pe\com\innovaviajes\dto\PasajeroWebDto.java
 C:\git\iviajes\iv-proy\iv-dto\src\main\java\pe\com\innovaviajes\cross\util\UtilIvDto.java
 C:\git\iviajes\iv-proy\iv-dto\src\main\java\pe\com\innovaviajes\dto\PaisDto.java
 C:\git\iviajes\iv-proy\iv-dto\src\main\java\pe\com\innovaviajes\dto\AerolineaDto.java
+C:\git\iviajes\iv-proy\iv-dto\src\main\java\pe\com\innovaviajes\dto\BusquedaHotelRequest.java
 C:\git\iviajes\iv-proy\iv-dto\src\main\java\pe\com\innovaviajes\exception\UtilIvDtoException.java
 C:\git\iviajes\iv-proy\iv-dto\src\main\java\pe\com\innovaviajes\dto\AvionDto.java
 C:\git\iviajes\iv-proy\iv-dto\src\main\java\pe\com\innovaviajes\dto\PrecioOfertaDto.java
@@ -21,7 +23,9 @@ C:\git\iviajes\iv-proy\iv-dto\src\main\java\pe\com\innovaviajes\dto\HorarioVuelo
 C:\git\iviajes\iv-proy\iv-dto\src\main\java\pe\com\innovaviajes\dto\RutaTramoDto.java
 C:\git\iviajes\iv-proy\iv-dto\src\main\java\pe\com\innovaviajes\dto\ConsultaViajeDto.java
 C:\git\iviajes\iv-proy\iv-dto\src\main\java\pe\com\innovaviajes\dto\MetodoPagoWebDto.java
+C:\git\iviajes\iv-proy\iv-dto\src\main\java\pe\com\innovaviajes\dto\ReservaHotelRequest.java
 C:\git\iviajes\iv-proy\iv-dto\src\main\java\pe\com\innovaviajes\dto\ErrorResponseDto.java
+C:\git\iviajes\iv-proy\iv-dto\src\main\java\pe\com\innovaviajes\dto\ReservaHotelResponse.java
 C:\git\iviajes\iv-proy\iv-dto\src\main\java\pe\com\innovaviajes\dto\BaseDto.java
 C:\git\iviajes\iv-proy\iv-dto\src\main\java\pe\com\innovaviajes\dto\ConsultaViajeWebDto.java
 C:\git\iviajes\iv-proy\iv-dto\src\main\java\pe\com\innovaviajes\dto\RegistroVentaWebDto.java
