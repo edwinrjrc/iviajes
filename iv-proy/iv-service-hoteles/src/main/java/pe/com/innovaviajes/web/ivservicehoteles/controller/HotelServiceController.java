@@ -36,6 +36,8 @@ public class HotelServiceController {
         try {
             final List<HotelDisponibleResponse> hoteles = hotelService.buscarHoteles(request);
 
+            log.info("Hoteles 2 ::"+hoteles);
+
             final HttpStatus status = hoteles.isEmpty() ? HttpStatus.NO_CONTENT : HttpStatus.OK;
             return new ResponseEntity<>(
                     mapearRespuesta(false, "Consulta de hoteles realizada", hoteles),

@@ -11,6 +11,8 @@ import java.util.Optional;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import pe.com.innovaviajes.dto.BusquedaHotelRequest;
@@ -21,6 +23,8 @@ import pe.com.innovaviajes.web.ivservicehoteles.service.HotelService;
 
 @Service
 public class HotelServiceImpl implements HotelService {
+
+    private static final Logger log = LoggerFactory.getLogger(HotelServiceImpl.class);
 
     @Override
     public List<HotelDisponibleResponse> buscarHoteles(BusquedaHotelRequest request) {
@@ -42,12 +46,14 @@ public class HotelServiceImpl implements HotelService {
             throw new IllegalArgumentException("No se encontraron hoteles disponibles");
         }
 
+        log.info(" hotelesBase ::"+hotelesBase);
+
         return hotelesBase.stream()
         .filter(Objects::nonNull)
-        .filter(h -> h.getUbicacion() != null && normalizar(h.getUbicacion()).contains(destinoFiltro))
+        //.filter(h -> h.getUbicacion() != null && normalizar(h.getUbicacion()).contains(destinoFiltro))
         .filter(h -> h.getCapacidad() >= totalPasajeros)
-        .filter(h -> categoriaFiltro.isEmpty() || (h.getCategoria() != null && normalizar(h.getCategoria()).equals(categoriaFiltro)))
-        .filter(h -> h.getPrecioPorNoche() != null && h.getPrecioPorNoche().compareTo(precioMaximo) <= 0)
+        //.filter(h -> categoriaFiltro.isEmpty() || (h.getCategoria() != null && normalizar(h.getCategoria()).equals(categoriaFiltro)))
+        //.filter(h -> h.getPrecioPorNoche() != null && h.getPrecioPorNoche().compareTo(precioMaximo) <= 0)
         .sorted(Comparator
                 // Cambiar la referencia a método por lambda elimina el aviso en rojo del analizador
                 .comparing((HotelDisponibleResponse h) -> h.getPrecioPorNoche(), Comparator.nullsLast(Comparator.naturalOrder()))
