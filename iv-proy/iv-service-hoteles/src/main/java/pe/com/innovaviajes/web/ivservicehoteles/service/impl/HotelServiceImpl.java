@@ -14,11 +14,10 @@ import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-
-import pe.com.innovaviajes.dto.BusquedaHotelRequest;
-import pe.com.innovaviajes.dto.HotelDisponibleResponse;
-import pe.com.innovaviajes.dto.ReservaHotelRequest;
-import pe.com.innovaviajes.dto.ReservaHotelResponse;
+import pe.com.innovaviajes.web.ivservicehoteles.dto.BusquedaHotelRequest;
+import pe.com.innovaviajes.web.ivservicehoteles.dto.HotelDisponibleResponse;
+import pe.com.innovaviajes.web.ivservicehoteles.dto.ReservaHotelRequest;
+import pe.com.innovaviajes.web.ivservicehoteles.dto.ReservaHotelResponse;
 import pe.com.innovaviajes.web.ivservicehoteles.service.HotelService;
 
 @Service

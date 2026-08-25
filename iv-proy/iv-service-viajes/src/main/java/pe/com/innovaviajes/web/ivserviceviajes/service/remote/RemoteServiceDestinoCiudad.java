@@ -32,9 +32,9 @@ import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonParser.Feature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import pe.com.innovaviajes.cross.util.Constantes;
-import pe.com.innovaviajes.dto.DestinoCiudadDto;
+import pe.com.innovaviajes.web.ivserviceviajes.dto.DestinoCiudadDto;
 import pe.com.innovaviajes.web.ivserviceviajes.exception.IvServiceDestinoCiudadException;
+import pe.com.innovaviajes.web.ivserviceviajes.util.Constantes;
 
 /**
  * @author Edwin

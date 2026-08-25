@@ -10,30 +10,30 @@ import java.util.Date;
 import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
+import pe.com.innovaviajes.web.ivserviceviajes.exception.UtilIvDtoException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import pe.com.innovaviajes.cross.util.Constantes;
-import pe.com.innovaviajes.cross.util.UtilIvDto;
-import pe.com.innovaviajes.dto.AerolineaDto;
-import pe.com.innovaviajes.dto.AeropuertoWebDto;
-import pe.com.innovaviajes.dto.AeropuertoWebMostrarDto;
-import pe.com.innovaviajes.dto.AvionDto;
-import pe.com.innovaviajes.dto.ConsultaViajeDto;
-import pe.com.innovaviajes.dto.DestinoCiudadDto;
-import pe.com.innovaviajes.dto.HorarioRutaDto;
-import pe.com.innovaviajes.dto.HorarioVueloDto;
-import pe.com.innovaviajes.dto.OfertaEncontrada;
-import pe.com.innovaviajes.dto.PrecioOfertaDto;
-import pe.com.innovaviajes.dto.RutaTramoDto;
-import pe.com.innovaviajes.dto.TramoEscalaDto;
-import pe.com.innovaviajes.dto.VuelosEncontrados;
-import pe.com.innovaviajes.exception.UtilIvDtoException;
+import pe.com.innovaviajes.web.ivserviceviajes.dto.AerolineaDto;
+import pe.com.innovaviajes.web.ivserviceviajes.dto.AeropuertoWebMostrarDto;
+import pe.com.innovaviajes.web.ivserviceviajes.dto.AeropuertoWebDto;
+import pe.com.innovaviajes.web.ivserviceviajes.dto.DestinoCiudadDto;
+import pe.com.innovaviajes.web.ivserviceviajes.dto.AvionDto;
+import pe.com.innovaviajes.web.ivserviceviajes.dto.ConsultaViajeDto;
+import pe.com.innovaviajes.web.ivserviceviajes.dto.HorarioRutaDto;
+import pe.com.innovaviajes.web.ivserviceviajes.dto.HorarioVueloDto;
+import pe.com.innovaviajes.web.ivserviceviajes.dto.OfertaEncontrada;
+import pe.com.innovaviajes.web.ivserviceviajes.dto.PrecioOfertaDto;
+import pe.com.innovaviajes.web.ivserviceviajes.dto.RutaTramoDto;
+import pe.com.innovaviajes.web.ivserviceviajes.dto.TramoEscalaDto;
+import pe.com.innovaviajes.web.ivserviceviajes.dto.VuelosEncontrados;
 import pe.com.innovaviajes.web.ivserviceviajes.exception.IvServiceDestinoCiudadException;
 import pe.com.innovaviajes.web.ivserviceviajes.service.DestinoCiudadCatalogoService;
 import pe.com.innovaviajes.web.ivserviceviajes.service.remote.RemoteServiceDestinoCiudad;
+import pe.com.innovaviajes.web.ivserviceviajes.util.Constantes;
+import pe.com.innovaviajes.web.ivserviceviajes.util.UtilIvDto;
 import pe.com.innovaviajes.web.ivserviceviajes.util.UtilServiceViajes;
 
 /**

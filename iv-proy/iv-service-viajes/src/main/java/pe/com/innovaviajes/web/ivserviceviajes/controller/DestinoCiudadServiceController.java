@@ -17,11 +17,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import pe.com.innovaviajes.cross.util.Constantes;
-import pe.com.innovaviajes.cross.util.UtilIvDto;
-import pe.com.innovaviajes.dto.AeropuertoWebMostrarDto;
+import pe.com.innovaviajes.web.ivserviceviajes.dto.AeropuertoWebMostrarDto;
 import pe.com.innovaviajes.web.ivserviceviajes.exception.IvServiceDestinoCiudadException;
 import pe.com.innovaviajes.web.ivserviceviajes.service.DestinoCiudadCatalogoService;
+import pe.com.innovaviajes.web.ivserviceviajes.util.Constantes;
+import pe.com.innovaviajes.web.ivserviceviajes.util.UtilIvDto;
 
 
 /**
@@ -58,7 +58,7 @@ public class DestinoCiudadServiceController {
 			}
 			mapeo = new HashMap<String, Object>();
 			mapeo.put(variableMapError, false);
-			mapeo.put(variableMapMensaje, "Existo");
+			mapeo.put(variableMapMensaje, Constantes.VALOR_DATA_MSJE_EXITO);
 			mapeo.put(Constantes.VALOR_DATA_MAP, listaAeropuertos);
 
 		} catch (IvServiceDestinoCiudadException e) {
@@ -67,14 +67,14 @@ public class DestinoCiudadServiceController {
 
 			mapeo = new HashMap<String, Object>();
 			mapeo.put(variableMapError, true);
-			mapeo.put(variableMapMensaje, "Operacion no completada");
+			mapeo.put(variableMapMensaje, Constantes.VALOR_DATA_MSJE_ERROR);
 		} catch (Exception e) {
 			log.error(e.getMessage(), e);
 			status = HttpStatus.INTERNAL_SERVER_ERROR;
 
 			mapeo = new HashMap<String, Object>();
 			mapeo.put(variableMapError, true);
-			mapeo.put(variableMapMensaje, "Operacion no completada");
+			mapeo.put(variableMapMensaje, Constantes.VALOR_DATA_MSJE_ERROR);
 		}
 
 		salida = new ResponseEntity<Map<String, Object>>(mapeo, status);

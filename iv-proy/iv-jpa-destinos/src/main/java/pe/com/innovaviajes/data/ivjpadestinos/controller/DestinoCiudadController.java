@@ -18,12 +18,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import pe.com.innovaviajes.cross.util.Constantes;
-import pe.com.innovaviajes.cross.util.UtilIvDto;
 import pe.com.innovaviajes.data.ivjpadestinos.dao.DestinoCiudadRepository;
+import pe.com.innovaviajes.data.ivjpadestinos.dto.DestinoCiudadDto;
 import pe.com.innovaviajes.data.ivjpadestinos.entity.DestinoCiudad;
 import pe.com.innovaviajes.data.ivjpadestinos.util.Utilivjpa;
-import pe.com.innovaviajes.dto.DestinoCiudadDto;
+import pe.com.innovaviajes.data.ivjpadestinos.util.Constantes;
+import pe.com.innovaviajes.data.ivjpadestinos.util.UtilIvDto;
 
 
 

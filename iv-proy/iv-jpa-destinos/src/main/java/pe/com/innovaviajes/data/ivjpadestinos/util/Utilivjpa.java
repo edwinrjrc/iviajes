@@ -11,12 +11,11 @@ import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import pe.com.innovaviajes.cross.util.UtilIvDto;
+import pe.com.innovaviajes.data.ivjpadestinos.dto.AeropuertoWebDto;
+import pe.com.innovaviajes.data.ivjpadestinos.dto.DestinoCiudadDto;
 import pe.com.innovaviajes.data.ivjpadestinos.entity.AeropuertoWeb;
 import pe.com.innovaviajes.data.ivjpadestinos.entity.DestinoCiudad;
 import pe.com.innovaviajes.data.ivjpadestinos.exception.JpaDestinosException;
-import pe.com.innovaviajes.dto.AeropuertoWebDto;
-import pe.com.innovaviajes.dto.DestinoCiudadDto;
 
 /**
  * @author Edwin
@@ -95,8 +94,6 @@ public class Utilivjpa {
 			dto.setIdUsuarioModificacion(entity.getIdusuariomodificacion());
 			dto.setIdUsuarioRegistro(entity.getIdusuariocreacion());
 			dto.setIdEstadoRegistro(entity.getIdestadoregistro());
-			
-			
 			
 			return dto;
 		} catch (Exception e) {

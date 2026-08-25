@@ -10,8 +10,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import pe.com.innovaviajes.dto.ErrorResponseDto;
-import pe.com.innovaviajes.exception.UtilIvDtoException;
+import pe.com.innovaviajes.web.ivserviceviajes.dto.ErrorResponseDto;
+
 
 /**
  * @author Edwin

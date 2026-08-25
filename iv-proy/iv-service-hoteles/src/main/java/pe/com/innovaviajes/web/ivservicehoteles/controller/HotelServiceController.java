@@ -12,11 +12,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import pe.com.innovaviajes.dto.BusquedaHotelRequest;
-import pe.com.innovaviajes.dto.HotelDisponibleResponse;
-import pe.com.innovaviajes.dto.ReservaHotelRequest;
-import pe.com.innovaviajes.dto.ReservaHotelResponse;
+import pe.com.innovaviajes.web.ivservicehoteles.dto.BusquedaHotelRequest;
+import pe.com.innovaviajes.web.ivservicehoteles.dto.HotelDisponibleResponse;
+import pe.com.innovaviajes.web.ivservicehoteles.dto.ReservaHotelRequest;
+import pe.com.innovaviajes.web.ivservicehoteles.dto.ReservaHotelResponse;
 import pe.com.innovaviajes.web.ivservicehoteles.service.HotelService;
 
 @RestController

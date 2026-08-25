@@ -19,17 +19,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import pe.com.innovaviajes.cross.util.Constantes;
-import pe.com.innovaviajes.cross.util.UtilIvDto;
-import pe.com.innovaviajes.dto.ConsultaViajeDto;
-import pe.com.innovaviajes.dto.ConsultaViajeWebDto;
-import pe.com.innovaviajes.dto.RegistroVentaWebDto;
-import pe.com.innovaviajes.dto.VuelosEncontrados;
-import pe.com.innovaviajes.exception.UtilIvDtoException;
+import pe.com.innovaviajes.web.ivserviceviajes.dto.ConsultaViajeDto;
+import pe.com.innovaviajes.web.ivserviceviajes.dto.ConsultaViajeWebDto;
+import pe.com.innovaviajes.web.ivserviceviajes.dto.RegistroVentaWebDto;
+import pe.com.innovaviajes.web.ivserviceviajes.dto.VuelosEncontrados;
 import pe.com.innovaviajes.web.ivserviceviajes.exception.IvServiceDestinoCiudadException;
 import pe.com.innovaviajes.web.ivserviceviajes.service.DestinoCiudadCatalogoService;
+import pe.com.innovaviajes.web.ivserviceviajes.util.Constantes;
 import pe.com.innovaviajes.web.ivserviceviajes.util.UtilConversionS;
+import pe.com.innovaviajes.web.ivserviceviajes.util.UtilIvDto;
 import pe.com.innovaviajes.web.ivserviceviajes.util.UtilSecurity;
+
+import pe.com.innovaviajes.web.ivserviceviajes.exception.UtilIvDtoException;
 
 /**
  * @author Edwin
